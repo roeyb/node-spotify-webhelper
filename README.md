@@ -20,6 +20,7 @@ Example:
 ```javascript
 var nodeSpotifyWebHelper = require('node-spotify-webhelper');
 var spotify = new nodeSpotifyWebHelper.SpotifyWebHelper();
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 
 // get the name of the song which is currently playing
 spotify.getStatus(function (err, res) {
